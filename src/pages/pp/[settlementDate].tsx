@@ -5,6 +5,7 @@ import {IArcane, IPreparedDate, positionsCounter, settlementDateParser } from ".
 import PersonalPortrait from "../../components/personal-portrait/personal-portrait";
 import './settlement-date.sass';
 import {Helmet} from "react-helmet";
+import Header from '../../components/header/header';
 
 export default function SettlementDate(props: PageProps) {
     const {settlementDate} = props?.params ?? {};
@@ -22,10 +23,10 @@ export default function SettlementDate(props: PageProps) {
     return (<>
         {isDate ?
             <>
-                <Helmet>
-                    <title>{metaTitle}</title>
-                    <meta name="description" content={metaDescription} />
-                </Helmet>
+                <Header
+                  title={metaTitle}
+                  metaDescription={metaDescription}
+                />
                 <div className='settlement-date'>
                     <div className='date'>{firstDate}</div>
                     <PersonalPortrait calculation={date} />
