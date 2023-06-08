@@ -60,8 +60,8 @@ export function positionsCounter(data: string): IArcane {
         a['E'] = positionPreparing(a['4'].value + a['6'].value, 'E');
         a['F'] = positionPreparing(a['5'].value + a['6'].value, 'F');
         a['H'] = positionPreparing(a['A'].value + a['E'].value, 'H');
-        a['G1'] = positionPreparing(a['B'].value + a['F'].value, 'G1');
-        a['G2'] = positionPreparing(a['C'].value + a['D'].value, 'G2');
+        a['G1'] = positionPreparing(a['C'].value + a['D'].value, 'G1');
+        a['G2'] = positionPreparing(a['B'].value + a['F'].value, 'G2');
         a['I'] = positionPreparing(a['G1'].value + a['G2'].value, 'I');
         a['J'] = positionPreparing(a['2'].value + a['8'].value, 'J');
     }
