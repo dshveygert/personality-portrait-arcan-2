@@ -13,7 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint --ext .ts,.tsx src --fix"
   },
   "dependencies": {
     "gatsby": "^5.9.0",
@@ -33,6 +34,32 @@
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
     "@types/react-helmet": "^6.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.8.2",
+    "prettier-eslint": "^15.0.1",
     "typescript": "^5.0.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "printWidth": 160,
+    "arrowParens": "always",
+    "parser": "typescript"
   }
 }
