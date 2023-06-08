@@ -82,7 +82,7 @@ export function settlementDateParser(data: string): IPreparedDate | false {
 }
 
 function roundingUp(n: number): number {
-    return n > magicNumber ? n - magicNumber : n;
+    return n > magicNumber ? roundingUp(n - magicNumber) : n;
 }
 
 function positionPreparing(val: number, key: number | string): IPosition {
